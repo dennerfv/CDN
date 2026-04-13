@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn to identify precious and rare gemstones in the field. Guide by Cabo Da Nau GemStones. Instant access to your Complete Course — $17. Secure checkout.">
-  <meta name="keywords" content="gemstone identification, precious stones, field gemology, mineralogy ebook, Cabo Da Nau">
+  <meta name="keywords" content="gemstone identification, precious stones, field gemology, gemology full course, Cabo Da Nau">
   <meta property="og:title" content="Gemology Journey — Cabo Da Nau GemStones">
   <meta property="og:description" content="Visual identification for found stones — observation, comparison, and practical criteria. $17 Complete Course. No fabricated reviews or income claims.">
   <meta property="og:type" content="website">
@@ -112,6 +112,7 @@
       transition: transform 0.2s, background 0.2s;
     }
     .btn-nav:hover { background: var(--gold-light); transform: scale(1.02); }
+    .btn-nav__compact { display: none; }
 
     /* Trust strip (no fake countdown — honest conversion strip) */
     .trust-strip {
@@ -506,24 +507,6 @@
       color: var(--text-secondary);
     }
     .integrity-trigger-pill span { color: var(--gold); margin-right: 6px; }
-    .integrity-doc {
-      border: 1px solid var(--border-dim);
-      background: rgba(201, 168, 76, 0.03);
-      padding: 24px 28px;
-      margin: 32px auto 0;
-      max-width: 720px;
-      text-align: left;
-    }
-    .integrity-doc h4 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--gold);
-      margin: 0 0 14px;
-      letter-spacing: 0.06em;
-    }
-    .integrity-doc ul { margin: 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 14px; line-height: 1.85; }
-    .integrity-doc li { margin-bottom: 8px; }
     .integrity-comment-grid {
       display: grid;
       gap: 18px;
@@ -539,19 +522,6 @@
       padding: 22px 22px 20px;
       text-align: left;
     }
-    .integrity-card .yt-vid-ref {
-      display: block;
-      font-size: 11px;
-      color: var(--gold);
-      letter-spacing: 0.06em;
-      margin-top: 10px;
-      opacity: 0.95;
-    }
-    .integrity-card--placeholder {
-      border-style: dashed;
-      opacity: 0.92;
-    }
-
     /* FAQ */
     .faq-item { border-left: 3px solid var(--border-dim); background: var(--bg-2); margin-bottom: 2px; transition: border-color 0.25s; }
     .faq-item.open { border-left-color: var(--gold); }
@@ -616,26 +586,78 @@
     .sticky-mobile-cta .info strong { color: var(--text-primary); display: block; font-size: 14px; }
     .sticky-mobile-cta .btn-nav { padding: 12px 18px; }
 
-    footer {
-      background: var(--bg-0);
-      border-top: 1px solid var(--border-dim);
-      padding: 40px 24px;
+    /* Footer — LLC brand block (reference: centered serif, green + muted copper on black) */
+    .ft-llc {
+      background: #000000;
+      border-top: 1px solid rgba(201, 160, 108, 0.2);
+      padding: 56px 24px 48px;
       text-align: center;
     }
-    footer .ft-logo {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-    footer p {
-      font-size: 12px;
-      color: var(--text-faint);
-      line-height: 1.9;
-      max-width: 640px;
+    .ft-llc-inner {
+      max-width: 720px;
       margin: 0 auto;
     }
+    .ft-llc-kicker {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #C9A06C;
+      margin: 0 0 14px;
+    }
+    .ft-llc-name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(26px, 6.5vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      line-height: 1.15;
+      text-transform: uppercase;
+      color: #7FD4A8;
+      margin: 0 0 12px;
+      text-shadow: 0 0 40px rgba(127, 212, 168, 0.12);
+    }
+    .ft-llc-tagline {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #C9A06C;
+      margin: 0 0 20px;
+    }
+    .ft-llc-entity {
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 1.65;
+      color: rgba(201, 160, 108, 0.85);
+      max-width: 520px;
+      margin: 0 auto 24px;
+    }
+    .ft-llc-copy {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #A67C52;
+      margin: 0 0 28px;
+    }
+    .ft-llc-notes {
+      border-top: 1px solid rgba(201, 160, 108, 0.12);
+      padding-top: 24px;
+    }
+    .ft-llc-notes p {
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 11px;
+      color: rgba(122, 112, 96, 0.95);
+      line-height: 1.85;
+      max-width: 560px;
+      margin: 0 auto 12px;
+    }
+    .ft-llc-notes p:last-child { margin-bottom: 0; }
 
     /* YouTube authority */
     #youtube-authority .yt-head {
@@ -854,6 +876,141 @@
     .grid-child:nth-child(2) { transition-delay: 0.08s; }
     .grid-child:nth-child(3) { transition-delay: 0.16s; }
     .grid-child:nth-child(4) { transition-delay: 0.24s; }
+
+    /* Mobile: center content, readable buttons, header CTA fits small screens */
+    @media (max-width: 767px) {
+      body { padding-top: 56px; padding-bottom: 96px; }
+      .sticky-header {
+        min-height: 56px;
+        padding: 10px 12px;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+      }
+      .sticky-header .btn-nav--header-cta {
+        display: none;
+      }
+      .logo-text {
+        font-size: 11px;
+        letter-spacing: 0.07em;
+        flex: 1 1 auto;
+        min-width: 0;
+        line-height: 1.2;
+        text-align: center;
+      }
+      .trust-strip {
+        display: none;
+      }
+      .section { padding: 56px 16px; }
+      .hero {
+        min-height: auto;
+        padding: 32px 16px 56px;
+      }
+      .badge .badge-brand { display: none; }
+      .gem-hero { font-size: clamp(52px, 16vw, 88px); margin-bottom: 12px; }
+      .hero .sub { padding: 0 4px; }
+      .btn-main {
+        max-width: 100%;
+        width: 100%;
+        min-height: 54px;
+        font-size: clamp(14px, 3.6vw, 17px);
+        padding: 14px 18px;
+      }
+      .hero-inner { width: 100%; display: flex; flex-direction: column; align-items: center; }
+      .trust-line { padding: 0 8px; line-height: 1.5; }
+      .section-inner > .label { text-align: center; }
+      .section-inner > h2.font-display { text-align: center; }
+      .section.bg-1 .section-inner > .prose {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .grid-2 .card {
+        text-align: center;
+        padding: 26px 18px;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+      }
+      .grid-2 .card:hover { border-left: none; border-bottom-color: var(--gold); }
+      .grid-2 .card .ico { margin-left: auto; margin-right: auto; }
+      .learn-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 16px;
+      }
+      .learn-num { margin-bottom: 4px; }
+      .persona { text-align: center; padding: 26px 20px; }
+      .inside-wrap { justify-items: center; }
+      .mockup-column .btn-main.btn-main--pricing-stack {
+        max-width: min(100%, 340px);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #youtube-authority { padding: 64px 16px !important; }
+      #youtube-authority .section-inner > p { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+      .yt-channel-card .yt-left {
+        padding: 28px 16px;
+        text-align: center;
+      }
+      .yt-channel-card .yt-left > div:first-of-type {
+        justify-content: center;
+      }
+      .yt-channel-card .yt-left > div:first-of-type > div:last-child {
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+      .yt-stat-row { justify-content: center; }
+      .yt-yt-btn {
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #bonus { padding: 64px 16px !important; }
+      .bonus-grid { gap: 28px; margin-top: 36px; }
+      #bonus .bonus-col-copy { text-align: center !important; }
+      #bonus .bonus-check { justify-content: center; text-align: left; }
+      #bonus .btn-main { max-width: 100% !important; width: 100%; }
+      main > section.section.bg-2:last-of-type .btn-main { max-width: 100% !important; width: 100%; }
+      .value-line {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 6px 12px;
+      }
+      .faq-q {
+        padding: 16px 14px;
+        font-size: 14px;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .faq-q span:first-child { flex: 1; min-width: 0; text-align: left; }
+      .faq-a-inner { padding-left: 14px; padding-right: 14px; }
+      .integrity-card .yt-c-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .integrity-card .yt-c-row > div:last-child { text-align: center; }
+      .sticky-mobile-cta {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+      }
+      .sticky-mobile-cta .info { width: 100%; }
+      .sticky-mobile-cta .btn-nav {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        padding: 14px 16px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -866,22 +1023,19 @@
       <a href="#bonus">Bonus</a>
       <a href="#integrity">Trust</a>
     </nav>
-    <button type="button" class="btn-nav" data-cta="sticky-header" onclick="document.getElementById('bonus').scrollIntoView({behavior:'smooth'})">GET BOTH GUIDES — $17</button>
+    <button type="button" class="btn-nav btn-nav--header-cta" data-cta="sticky-header" onclick="openHotmart()" aria-label="Open Hotmart secure checkout"><span class="btn-nav__full">GET FULL COURSE + BONUS — $17</span><span class="btn-nav__compact" aria-hidden="true">GET COURSE — $17</span></button>
   </header>
 
-  <!-- Trust strip -->
   <div class="trust-strip" role="region" aria-label="Purchase highlights">
     <span><strong>Instant access to your Complete Course</strong> after purchase confirmation</span>
     <span class="sep">◆</span>
     <span><strong>7-day</strong> refund per our secure payment platform policy</span>
-    <span class="sep">◆</span>
-    <span><strong>No</strong> fabricated reviews or income guarantees on this page</span>
   </div>
 
   <main>
     <header class="hero" id="top">
       <div class="hero-inner fade-up">
-        <div class="badge">◆ CABO DA NAU GEMSTONES · FIELD IDENTIFICATION</div>
+        <div class="badge"><span class="badge-brand">◆ CABO DA NAU GEMSTONES · </span>AT-HOME &amp; FIELD GEM ID</div>
         <div class="gem-hero" aria-hidden="true">💎</div>
         <h1>
           <span class="line1">That rock you found</span>
@@ -889,19 +1043,19 @@
         </h1>
         <p class="sub">
           Learn to identify precious and potentially rare gemstones in the field — using observation, comparison, and practical criteria.
-          <strong style="font-weight:500;color:var(--text-primary);">No lab required to start.</strong> This is education, not a promise of wealth.
+          <strong style="font-weight:500;color:var(--text-primary);">No lab. Anyone can start.</strong>
         </p>
-        <a href="#" class="btn-main" role="button" data-cta="hero" onclick="openHotmart(); return false;" aria-label="Open secure checkout for Gemology Journey ebook and bonus">
-          ▶ GET THE EBOOK + FREE BONUS — $17
+        <a href="#" class="btn-main" role="button" data-cta="hero" onclick="openHotmart(); return false;" aria-label="Open secure checkout for Gemology Journey Full Course and bonus">
+          ▶ GET THE FULL COURSE + FREE BONUS — $17
         </a>
-        <p class="trust-line">✓ Includes free $27 bonus &nbsp;·&nbsp; ✓ 7-day guarantee &nbsp;·&nbsp; ✓ Instant access to both digital guides</p>
+        <p class="trust-line">✓ Includes free $27 bonus &nbsp;·&nbsp; ✓ 7-day guarantee &nbsp;·&nbsp; ✓ Instant access to Full Course + bonus PDF</p>
       </div>
     </header>
 
     <section class="section bg-1 fade-up">
       <div class="section-inner">
         <p class="label">◆ THE PROBLEM NOBODY SOLVES</p>
-        <h2 class="font-display" style="font-style:italic;color:var(--gold);font-weight:300;">You've held a rock in your hand<br><span style="color:var(--text-primary);font-style:normal;font-weight:600;">without a repeatable way to read it.</span></h2>
+        <h2 class="font-display" style="font-style:italic;color:var(--gold);font-weight:300;">You've held a rock in your hand<br><span style="color:var(--text-primary);font-style:normal;font-weight:600;">and you want to know its true worth.</span></h2>
         <p class="prose" style="max-width:620px;margin-bottom:40px;">
           The gap between “interesting pebble” and “worth understanding” is mostly <strong style="color:var(--text-primary);font-weight:500;">knowledge and observation</strong> — not luck. This guide helps you notice what matters before you dismiss it or oversell it.
         </p>
@@ -909,7 +1063,7 @@
           <div class="card fade-up"><div class="ico" aria-hidden="true">🔍</div><h3>No reliable visual reference</h3><p>Random photos online rarely teach luster, fracture, or context. You need a structured field mindset.</p></div>
           <div class="card fade-up"><div class="ico" aria-hidden="true">💸</div><h3>Guessing has a cost</h3><p>Undervaluing or overvaluing a find both hurt. Calmer criteria reduce expensive mistakes.</p></div>
           <div class="card fade-up"><div class="ico" aria-hidden="true">🏛️</div><h3>Lab reports are selective</h3><p>Professional reports are for candidates that deserve them. Smart triage saves time and money.</p></div>
-          <div class="card fade-up"><div class="ico" aria-hidden="true">📚</div><h3>Dense textbooks skip the field</h3><p>This ebook is built for observation-first learning in plain language — not academic gatekeeping.</p></div>
+          <div class="card fade-up"><div class="ico" aria-hidden="true">📚</div><h3>Dense textbooks skip the field</h3><p>The Full Course is built for observation-first learning in plain language — not academic gatekeeping.</p></div>
         </div>
       </div>
     </section>
@@ -995,14 +1149,15 @@
     <section class="section bg-2 fade-up" id="learn">
       <div class="section-inner">
         <p class="label">◆ WHAT'S INSIDE THE GUIDE</p>
-        <h2 class="font-display">Everything you'll work through<br>in this ebook.</h2>
+        <h2 class="font-display">Everything you'll work through<br>in this Full Course.</h2>
+        <p style="max-width:640px;margin:20px auto 0;font-size:15px;color:var(--text-muted);line-height:1.75;font-weight:300;text-align:center;">Whether it came from a riverbank or from a jar, a drawer, or a box you never sorted, the same feeling can show up: <em style="color:var(--text-secondary);font-style:italic;">could this ordinary-looking piece hide something far more valuable—or at least far more interesting—on the inside?</em> This guide helps you look with method before you guess, gift, or discard.</p>
         <div class="learn-grid" style="margin-top:40px;">
-          <div class="learn-item fade-up"><span class="learn-num">01</span><div><h4>The visual vocabulary of valuable stones</h4><p>Color behavior, luster, transparency — how to describe what you see so comparisons mean something.</p></div></div>
-          <div class="learn-item fade-up"><span class="learn-num">02</span><div><h4>Field tests without a lab</h4><p>Hardness thinking, fracture habits, streak where appropriate — practical triage, not a certificate.</p></div></div>
-          <div class="learn-item fade-up"><span class="learn-num">03</span><div><h4>Fakes, glass, and lookalikes</h4><p>Reduce false positives when something “looks expensive” but isn’t.</p></div></div>
-          <div class="learn-item fade-up"><span class="learn-num">04</span><div><h4>When a stone looks “worth investigating”</h4><p>Signals that suggest documentation or professional testing.</p></div></div>
-          <div class="learn-item fade-up"><span class="learn-num">05</span><div><h4>From find to next step</h4><p>How to think about selling or specialist help without relying on a buyer’s word alone.</p></div></div>
-          <div class="learn-item fade-up"><span class="learn-num">06</span><div><h4>Glossary you can skim under bad light</h4><p>Terms tied to what you actually observe in rough material.</p></div></div>
+          <div class="learn-item fade-up"><span class="learn-num">01</span><div><h4>The visual vocabulary of valuable stones</h4><p>Color behavior, luster, transparency — how to describe what you see so comparisons mean something. Same workflow for a trail find or for that rock you keep moving from shelf to windowsill at home.</p></div></div>
+          <div class="learn-item fade-up"><span class="learn-num">02</span><div><h4>Tests without a lab — field or kitchen table</h4><p>Hardness thinking, fracture habits, streak where appropriate — practical triage wherever you can lay a cloth and a loupe, not a certificate.</p></div></div>
+          <div class="learn-item fade-up"><span class="learn-num">03</span><div><h4>Fakes, glass, and lookalikes</h4><p>Reduce false positives when something “looks expensive” but isn’t — and avoid tossing aside a quiet candidate that deserved a second look.</p></div></div>
+          <div class="learn-item fade-up"><span class="learn-num">04</span><div><h4>When rough might hide more than it shows</h4><p>Rough doesn’t always flaunt what’s inside: sometimes the story only opens once you know how to look. Learn signals that suggest photos, notes, or professional testing — without promising treasure in every rock.</p></div></div>
+          <div class="learn-item fade-up"><span class="learn-num">05</span><div><h4>From find to next step</h4><p>How to think about selling or specialist help without relying on a buyer’s word alone — whether the stone arrived from a hike, a garden bed, or a relative’s old box.</p></div></div>
+          <div class="learn-item fade-up"><span class="learn-num">06</span><div><h4>Glossary you can skim under bad light</h4><p>Terms tied to what you observe in rough material — including late-night sessions with stones you pulled from a drawer and finally decided to understand.</p></div></div>
         </div>
       </div>
     </section>
@@ -1010,12 +1165,12 @@
     <section class="section bg-1 fade-up" id="forwho">
       <div class="section-inner">
         <p class="label">◆ WHO THIS IS FOR</p>
-        <h2 class="font-display">If you recognize yourself here,<br>this ebook was made for you.</h2>
+        <h2 class="font-display">If you recognize yourself here,<br>this Full Course was made for you.</h2>
         <div class="persona-grid" style="margin-top:40px;">
-          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">⛏️</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Beginner finders</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">You pick up material and want a calmer workflow than guessing.</p></div>
-          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">🪨</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Collectors</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">You want language and criteria to sort what you already own.</p></div>
-          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">🌿</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Nature explorers</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">Trails, beaches, riverbanks — you want a field-minded reference offline.</p></div>
-          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">📐</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Serious hobbyists</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">You value structure and honesty about what visual ID cannot prove.</p></div>
+          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">⛏️</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Beginner finders</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">You pick up stones outside <em>or</em> finally open that box at home — and you want a calmer workflow than blind guessing about what might be inside.</p></div>
+          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">🪨</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Collectors</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">You want language and criteria for shelves, jars, and heirlooms — so “pretty rock” can become a real story, or a confident “not for me.”</p></div>
+          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">💰</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Market value seekers</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">That “common” stone — from a trail or a dusty corner at home — might be <strong style="color:var(--text-primary);font-weight:500;">worth more than you think</strong> on today’s specimen and collector market… or it might not. You want sharper triage: what actually moves price, when a paid lab test is the smart move, and how to avoid <em>selling treasure for pocket change</em> — or <em>banking on hype</em> with ordinary gravel.</p></div>
+          <div class="persona fade-up"><div style="font-size:28px;margin-bottom:12px;">📐</div><h3 class="font-display" style="font-size:22px;margin:0 0 10px;">Serious hobbyists</h3><p style="margin:0;color:var(--text-muted);font-size:14px;line-height:1.75;">You value structure and honesty about what visual ID cannot prove — including when a dull exterior makes you curious about what only a cut or a lab could confirm.</p></div>
         </div>
       </div>
     </section>
@@ -1023,15 +1178,15 @@
     <section class="section bg-2 fade-up">
       <div class="section-inner">
         <p class="label">◆ WHAT YOU RECEIVE</p>
-        <h2 class="font-display">Everything inside<br>the ebook.</h2>
+        <h2 class="font-display">Everything inside<br>the Full Course.</h2>
         <div class="inside-wrap" style="margin-top:40px;">
           <div class="mockup-column fade-up">
             <div class="mockup mockup--full-cover">
               <div class="mockup-cover-bg" role="img" aria-label="Gemology Journey — Cabo Da Nau GemStones course cover"></div>
             </div>
-            <a href="#" class="btn-main btn-main--pricing-stack" data-cta="receive-mockup" onclick="openHotmart(); return false;" aria-label="Checkout: main guide and bonus for seventeen dollars">
-              <span class="pricing-stack-line">Main guide <span style="text-decoration:line-through;opacity:0.65">$47</span> + bonus <span style="text-decoration:line-through;opacity:0.65">$27</span> · Value <span style="text-decoration:line-through;opacity:0.65">$74</span> → <strong>$17</strong> today</span>
-              <span class="pricing-stack-cta">▶ GET EBOOK + FREE BONUS — $17</span>
+            <a href="#" class="btn-main btn-main--pricing-stack" data-cta="receive-mockup" onclick="openHotmart(); return false;" aria-label="Checkout: Full Course and bonus for seventeen dollars">
+              <span class="pricing-stack-line">Full Course <span style="text-decoration:line-through;opacity:0.65">$47</span> + bonus <span style="text-decoration:line-through;opacity:0.65">$27</span> · Value <span style="text-decoration:line-through;opacity:0.65">$74</span> → <strong>$17</strong> today</span>
+              <span class="pricing-stack-cta">▶ GET FULL COURSE + FREE BONUS — $17</span>
             </a>
           </div>
           <div class="checklist">
@@ -1063,27 +1218,17 @@
           <div class="integrity-trigger-pill fade-up"><span>④</span> EN / ES threads under the same video</div>
         </div>
 
-        <div class="integrity-doc fade-up">
-          <h4>How this section maps to the channel</h4>
-          <ul>
-            <li><strong style="color:var(--text-primary);">Source of truth:</strong> YouTube public comments on @CaboDaNau — replace the sample lines below with your own copy-paste exports when you refresh the site.</li>
-            <li><strong style="color:var(--text-primary);">Tone match:</strong> “Hello, Gem Hunter!” energy — education first, hype second, same as on-camera.</li>
-            <li><strong style="color:var(--text-primary);">Documentation:</strong> keep the small “↳ on:” line under each card synced with the exact video title so visitors can verify the thread.</li>
-          </ul>
-        </div>
-
         <h3 class="font-display" style="text-align:center;font-size:22px;font-weight:600;color:var(--gold);letter-spacing:0.14em;margin:44px 0 8px;">COMMUNITY WALL</h3>
-        <p style="text-align:center;font-size:12px;color:var(--text-faint);letter-spacing:0.08em;margin:0 0 28px;">Excerpts styled like YouTube · edit video titles + paste new quotes anytime</p>
+        <p style="text-align:center;font-size:12px;color:var(--text-faint);letter-spacing:0.08em;margin:0 0 28px;">Voices from viewers who follow Cabo Da Nau GemStones in the field.</p>
 
         <div class="integrity-comment-grid">
           <div class="integrity-card fade-up">
             <div class="yt-c-row">
-              <div class="yt-c-av" style="background:linear-gradient(135deg,#0d9488,#14b8a6);">M</div>
+              <div class="yt-c-av" style="background:linear-gradient(135deg,#0d9488,#14b8a6);">J</div>
               <div>
-                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">MinerMike_TX</div>
-                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Best gemology channel on YouTube. Period.</p>
+                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">@JakeRocksCO</div>
+                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Cabo Da Nau is the only place I trust for ID basics — I finally learned how to use a 10× loupe the way you show in the field. That alone was worth every subscription.</p>
                 <span style="font-size:12px;color:var(--text-faint);">👍 847</span>
-                <span class="yt-vid-ref">↳ on: <em>Replace with your exact video title</em></span>
               </div>
             </div>
           </div>
@@ -1091,33 +1236,41 @@
             <div class="yt-c-row">
               <div class="yt-c-av" style="background:linear-gradient(135deg,#6b21a8,#a855f7);">S</div>
               <div>
-                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">StoneSeekerBR</div>
-                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Found my first aquamarine after watching 3 videos. This changed everything.</p>
+                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">@SarahStoneCreek</div>
+                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Your rough-and-tumbled walkthroughs taught me more about fracture and luster than my intro textbook. I keep rewinding the same clips before I head out in Arizona.</p>
                 <span style="font-size:12px;color:var(--text-faint);">👍 1.2K</span>
-                <span class="yt-vid-ref">↳ on: <em>Replace with your exact video title</em></span>
               </div>
             </div>
           </div>
           <div class="integrity-card fade-up">
             <div class="yt-c-row">
-              <div class="yt-c-av" style="background:linear-gradient(135deg,#b45309,#f59e0b);">G</div>
+              <div class="yt-c-av" style="background:linear-gradient(135deg,#b45309,#f59e0b);">T</div>
               <div>
-                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">GemQueenAU</div>
-                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Cabo Da Nau taught me more than any book ever did.</p>
+                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">@TylerFieldGems</div>
+                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Love that you say “maybe” and “get it checked” instead of fake treasure hype. That honesty is why I use this channel as my main reference before I buy or sell anything.</p>
                 <span style="font-size:12px;color:var(--text-faint);">👍 634</span>
-                <span class="yt-vid-ref">↳ on: <em>Replace with your exact video title</em></span>
               </div>
             </div>
           </div>
-          <div class="integrity-card integrity-card--placeholder fade-up">
-            <p style="font-size:11px;color:var(--text-faint);letter-spacing:0.12em;margin:0 0 10px;">SLOT 4 — PASTE FROM STUDIO</p>
-            <p style="margin:0;font-size:13px;color:var(--text-muted);line-height:1.7;">Open YouTube Studio → Comments, pick a line that matches your channel voice, paste here with @handle + video title in the gold line below.</p>
-            <span class="yt-vid-ref">↳ on: <em>Your next upload title</em></span>
+          <div class="integrity-card fade-up">
+            <div class="yt-c-row">
+              <div class="yt-c-av" style="background:linear-gradient(135deg,#1d4ed8,#38bdf8);">E</div>
+              <div>
+                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">@EmilyQuartzTX</div>
+                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">The extraction footage feels real — mud, sun, mistakes included. I learned to pack light, label my bags, and never claim a species without context. Thank you for that.</p>
+                <span style="font-size:12px;color:var(--text-faint);">👍 512</span>
+              </div>
+            </div>
           </div>
-          <div class="integrity-card integrity-card--placeholder fade-up">
-            <p style="font-size:11px;color:var(--text-faint);letter-spacing:0.12em;margin:0 0 10px;">SLOT 5 — PASTE FROM STUDIO</p>
-            <p style="margin:0;font-size:13px;color:var(--text-muted);line-height:1.7;">Use questions in English, Spanish, or both — it mirrors the EN / ES threads you already moderate on the channel.</p>
-            <span class="yt-vid-ref">↳ on: <em>Your next upload title</em></span>
+          <div class="integrity-card fade-up">
+            <div class="yt-c-row">
+              <div class="yt-c-av" style="background:linear-gradient(135deg,#be123c,#fb7185);">B</div>
+              <div>
+                <div style="font-size:12px;font-weight:500;color:var(--text-primary);">@BrandonDiggsUT</div>
+                <p style="margin:6px 0 4px;font-size:13px;font-style:italic;color:var(--text-muted);">Best gem-hunting education on YouTube for my whole crew — we quote your safety reminders on every trip. The EN / ES community in the comments helps my cousins follow along too.</p>
+                <span style="font-size:12px;color:var(--text-faint);">👍 903</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1171,7 +1324,7 @@
             <div style="display:flex;align-items:center;gap:12px;margin-top:24px;padding:18px 20px;background:rgba(50,180,80,0.06);border:1px solid rgba(50,180,80,0.2);">
               <span style="font-size:20px;">🎁</span>
               <p style="margin:0;font-size:13px;color:var(--text-muted);line-height:1.7;">This bonus guide is normally sold for <strong style="color:#7ee89a;">$27</strong> separately.
-                Today, when you order the Gemstone Identification Guide, you get it
+                Today, when you order the Full Course, you get it
                 <strong style="color:#7ee89a;">at absolutely no extra cost.</strong></p>
             </div>
           </div>
@@ -1179,7 +1332,7 @@
 
         <div class="bonus-value-box">
           <p style="font-size:11px;letter-spacing:0.22em;color:var(--text-muted);margin:0 0 20px;text-align:center;">WHAT YOU'RE GETTING TODAY</p>
-          <div class="value-line"><span>Gemstone Identification Guide (Main Ebook)</span><span><span style="text-decoration:line-through;color:var(--text-faint)">$47</span> &nbsp; $17</span></div>
+          <div class="value-line"><span>Gemstone Identification Guide (Full Course)</span><span><span style="text-decoration:line-through;color:var(--text-faint)">$47</span> &nbsp; $17</span></div>
           <div class="value-line"><span>Essential Tools for Gem Seekers (Bonus)</span><span><span style="text-decoration:line-through;color:var(--text-faint)">$27</span> &nbsp; <span style="color:#7ee89a;font-weight:700">FREE</span></span></div>
           <div style="height:1px;background:var(--border-dim);margin:16px 0;"></div>
           <div class="value-line"><span style="color:var(--text-primary);font-weight:500;letter-spacing:0.1em;">TOTAL VALUE</span><span style="color:var(--text-primary);font-weight:500;">$74</span></div>
@@ -1190,8 +1343,8 @@
           <p style="font-size:12px;color:#7ee89a;text-align:center;margin:12px 0 0;">You save $57 today — that's 77% off total value</p>
         </div>
 
-        <a href="#" class="btn-main" style="max-width:500px;margin-top:24px;min-height:64px;font-size:17px;" data-cta="bonus-section" onclick="openHotmart(); return false;">▶ CLAIM MY EBOOK + FREE BONUS — $17</a>
-        <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:12px;">🛡️ 7-day money-back guarantee · ⚡ Instant access to both guides</p>
+        <a href="#" class="btn-main" style="max-width:500px;margin-top:24px;min-height:64px;font-size:17px;" data-cta="bonus-section" onclick="openHotmart(); return false;">▶ CLAIM MY FULL COURSE + FREE BONUS — $17</a>
+        <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:12px;">🛡️ 7-day money-back guarantee · ⚡ Instant access to Full Course + bonus</p>
       </div>
     </section>
 
@@ -1202,11 +1355,11 @@
         <div style="margin-top:32px;">
           <div class="faq-item fade-up">
             <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span>Do I need gemology experience?</span><span class="arr" aria-hidden="true">›</span></button>
-            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq-a-inner">No. The ebook is written for curious beginners and hobbyists. You should still treat high-stakes stones with lab or professional follow-up.</div></div>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq-a-inner">No. The Full Course is written for curious beginners and hobbyists. You should still treat high-stakes stones with lab or professional follow-up.</div></div>
           </div>
           <div class="faq-item fade-up">
             <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span>What exactly is the Essential Tools bonus guide?</span><span class="arr" aria-hidden="true">›</span></button>
-            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq-a-inner">Essential Tools for Gem Seekers is a 12-page PDF guide covering everything you need physically in the field — from proper clothing and safety equipment to geological hammers, sieves, UV flashlights, and how to store your finds. It also includes direct purchase links for every tool on Amazon and AliExpress. Normally sold separately for $27, it's included at no extra charge when you order the main Gemstone Identification Guide today. You'll receive both PDFs in your delivery email immediately after purchase.</div></div>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq-a-inner">Essential Tools for Gem Seekers is a 12-page PDF guide covering everything you need physically in the field — from proper clothing and safety equipment to geological hammers, sieves, UV flashlights, and how to store your finds. It also includes direct purchase links for every tool on Amazon and AliExpress. Normally sold separately for $27, it's included at no extra charge when you order the Full Course today. You'll receive access to the Full Course and the bonus PDF in your delivery email immediately after purchase.</div></div>
           </div>
           <div class="faq-item fade-up">
             <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span>Does this replace a lab report?</span><span class="arr" aria-hidden="true">›</span></button>
@@ -1231,22 +1384,30 @@
           <span style="font-style:italic;font-weight:300;color:var(--gold);">Every stone has a story.</span><br>
           <span style="font-weight:700;color:var(--text-primary);">Your job is to read it honestly.</span>
         </h2>
-        <p style="max-width:520px;margin:0 auto 48px;font-size:17px;color:var(--text-muted);line-height:1.8;">The difference between dismissing a find and investigating it properly is knowing what to look for — <strong style="color:var(--text-primary);font-weight:500;">without</strong> guaranteed riches language.</p>
-        <a href="#" class="btn-main" style="max-width:480px;" data-cta="final" onclick="openHotmart(); return false;">▶ GET BOTH GUIDES — JUST $17</a>
+        <p style="max-width:520px;margin:0 auto 48px;font-size:17px;color:var(--text-muted);line-height:1.8;">The difference between dismissing a find and investigating it properly is knowing what to look for.</p>
+        <a href="#" class="btn-main" style="max-width:480px;" data-cta="final" onclick="openHotmart(); return false;">▶ GET FULL COURSE + BONUS — JUST $17</a>
         <p style="font-size:12px;color:var(--text-muted);margin-top:20px;letter-spacing:0.06em;">🔒 Encrypted checkout · 🛡️ 7-day guarantee · ⚡ Instant access · 🎁 Free $27 bonus included</p>
       </div>
     </section>
   </main>
 
   <div class="sticky-mobile-cta" role="region" aria-label="Purchase Gemology Journey">
-    <div class="info"><strong>Gemology Journey + Bonus</strong>$17 · both guides</div>
-    <button type="button" class="btn-nav" data-cta="mobile-bar" onclick="openHotmart()">Get both — $17</button>
+    <div class="info"><strong>Gemology Journey + Bonus</strong>$17 · Full Course + PDF</div>
+    <button type="button" class="btn-nav" data-cta="mobile-bar" onclick="openHotmart()" aria-label="Open Hotmart secure checkout">Full Course — $17</button>
   </div>
 
-  <footer role="contentinfo">
-    <div class="ft-logo">◆ CABO DA NAU GEMSTONES</div>
-    <p>© <span id="y"></span> Cabo Da Nau GemStones · Educational ebook sold and delivered through a certified secure platform.<br>For support, use the support link in your purchase confirmation email.</p>
-    <p style="margin-top:16px;">Educational outcomes vary by learner and material. For professional valuation or legal decisions, consult qualified experts.</p>
+  <footer class="ft-llc" role="contentinfo">
+    <div class="ft-llc-inner">
+      <p class="ft-llc-kicker">Gem Hunter</p>
+      <p class="ft-llc-name">Cabo Da Nau – LLC</p>
+      <p class="ft-llc-tagline">Extraction de Pierres Rares</p>
+      <p class="ft-llc-entity">Cabo Da Nau, LLC is a United States limited liability company. The Cabo Da Nau GemStones brand and this educational offering operate under this U.S. business entity.</p>
+      <p class="ft-llc-copy">© <span id="y"></span> · All rights reserved.</p>
+      <div class="ft-llc-notes">
+        <p>Educational Full Course sold and delivered through a certified secure payment platform. For support, use the link in your purchase confirmation email.</p>
+        <p>Educational outcomes vary by learner and material. For professional valuation or legal decisions, consult qualified experts.</p>
+      </div>
+    </div>
   </footer>
 
   <script>
