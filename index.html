@@ -227,43 +227,6 @@
       color: var(--text-muted);
       letter-spacing: 0.06em;
     }
-    .integrity-note {
-      margin-top: 20px;
-      font-size: 13px;
-      font-style: italic;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Ticker */
-    .ticker-wrap {
-      background: var(--bg-1);
-      border-top: 1px solid var(--border-dim);
-      border-bottom: 1px solid var(--border-dim);
-      height: 56px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-    .ticker {
-      display: flex;
-      animation: ticker 48s linear infinite;
-      white-space: nowrap;
-    }
-    .ticker:hover { animation-play-state: paused; }
-    @keyframes ticker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .ticker span {
-      font-size: 13px;
-      color: var(--text-muted);
-      padding: 0 24px;
-    }
-    .ticker .sep { color: rgba(201,168,76,0.5); }
-
     /* Sections */
     .section { padding: 72px 20px; }
     @media (min-width: 640px) { .section { padding: 100px 24px; } }
@@ -577,41 +540,6 @@
       margin-right: auto;
     }
 
-    /* Offer */
-    .offer-zone {
-      position: relative;
-      padding: 80px 20px 100px;
-      text-align: center;
-      background: var(--bg-0);
-      overflow: hidden;
-    }
-    .offer-zone::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .offer-box {
-      position: relative;
-      max-width: 700px;
-      margin: 0 auto;
-      border: 1px solid rgba(201,168,76,0.30);
-      padding: 48px 28px 56px;
-      background: rgba(201,168,76,0.02);
-    }
-    @media (min-width: 640px) { .offer-box { padding: 64px 56px; } }
-    .price-old { font-size: 16px; color: var(--text-muted); text-decoration: line-through; }
-    .price-big {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(64px, 14vw, 88px);
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-      margin: 8px 0;
-    }
-    .price-big sup { font-size: 40px; vertical-align: super; }
-
     /* FAQ */
     .faq-item { border-left: 3px solid var(--border-dim); background: var(--bg-2); margin-bottom: 2px; transition: border-color 0.25s; }
     .faq-item.open { border-left-color: var(--gold); }
@@ -750,6 +678,17 @@
       font-weight: 700;
       color: #fff;
       flex-shrink: 0;
+    }
+    .yt-avatar--logo {
+      padding: 0;
+      overflow: hidden;
+      background: #070d18;
+    }
+    .yt-avatar--logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .yt-yt-btn {
       border: 1px solid rgba(255, 0, 0, 0.5);
@@ -913,7 +852,6 @@
       <a href="#learn">What You'll Learn</a>
       <a href="#forwho">Who It's For</a>
       <a href="#bonus">Bonus</a>
-      <a href="#offer">The Offer</a>
       <a href="#integrity">Trust</a>
     </nav>
     <button type="button" class="btn-nav" data-cta="sticky-header" onclick="document.getElementById('bonus').scrollIntoView({behavior:'smooth'})">GET BOTH GUIDES — $17</button>
@@ -945,30 +883,8 @@
           ▶ GET THE EBOOK + FREE BONUS — $17
         </a>
         <p class="trust-line">✓ Includes free $27 bonus &nbsp;·&nbsp; ✓ 7-day guarantee &nbsp;·&nbsp; ✓ Instant access to both digital guides</p>
-        <p class="integrity-note">We do not display paid actor testimonials or invented sales figures. Watch the Cabo Da Nau GemStones channel to judge the teaching style before you buy.</p>
       </div>
     </header>
-
-    <div class="ticker-wrap" aria-hidden="true">
-      <div class="ticker">
-        <span>◆ Field-first visual criteria</span><span class="sep">◆</span>
-        <span>◆ YouTube: @CaboDaNau — free context</span><span class="sep">◆</span>
-        <span>◆ $17 one-time · Complete Course (ebook)</span><span class="sep">◆</span>
-        <span>◆ Honest limits: triage, not a lab certificate</span><span class="sep">◆</span>
-        <span>◆ Encrypted secure checkout</span><span class="sep">◆</span>
-        <span>◆ Includes FREE Essential Tools bonus guide ($27 value)</span><span class="sep">◆</span>
-        <span>◆ 147K+ YouTube subscribers trust this knowledge</span><span class="sep">◆</span>
-        <span>◆ You save $57 today — 77% off total value</span><span class="sep">◆</span>
-        <span>◆ Field-first visual criteria</span><span class="sep">◆</span>
-        <span>◆ YouTube: @CaboDaNau — free context</span><span class="sep">◆</span>
-        <span>◆ $17 one-time · Complete Course (ebook)</span><span class="sep">◆</span>
-        <span>◆ Honest limits: triage, not a lab certificate</span><span class="sep">◆</span>
-        <span>◆ Encrypted secure checkout</span><span class="sep">◆</span>
-        <span>◆ Includes FREE Essential Tools bonus guide ($27 value)</span><span class="sep">◆</span>
-        <span>◆ 147K+ YouTube subscribers trust this knowledge</span><span class="sep">◆</span>
-        <span>◆ You save $57 today — 77% off total value</span>
-      </div>
-    </div>
 
     <section class="section bg-1 fade-up">
       <div class="section-inner">
@@ -1002,7 +918,9 @@
         <div class="yt-channel-card">
           <div class="yt-left">
             <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;">
-              <div class="yt-avatar" aria-hidden="true">CDN</div>
+              <div class="yt-avatar yt-avatar--logo" aria-hidden="true">
+                <img src="assets/cabo-da-nau-channel-logo.png" alt="" width="72" height="72" decoding="async">
+              </div>
               <div style="flex:1;min-width:200px;">
                 <div class="font-display" style="font-size:24px;font-weight:700;color:var(--text-primary);">Cabo Da Nau GemStones</div>
                 <div style="font-size:13px;color:var(--text-muted);letter-spacing:0.05em;margin:6px 0 10px;">@CaboDaNau</div>
@@ -1279,31 +1197,6 @@
 
         <a href="#" class="btn-main" style="max-width:500px;margin-top:24px;min-height:64px;font-size:17px;" data-cta="bonus-section" onclick="openHotmart(); return false;">▶ CLAIM MY EBOOK + FREE BONUS — $17</a>
         <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:12px;">🛡️ 7-day money-back guarantee · ⚡ Instant access to both guides</p>
-      </div>
-    </section>
-
-    <section class="offer-zone fade-up" id="offer">
-      <div class="offer-box">
-        <p class="label" style="margin-bottom:24px;">◆ SPECIAL OFFER</p>
-        <h2 class="font-display" style="font-style:italic;font-weight:300;font-size:clamp(24px,4vw,40px);margin-bottom:28px;">Everything below. One price. Today only.</h2>
-        <p style="font-size:13px;color:var(--text-muted);margin-bottom:8px;">Total value: $74 &nbsp;→&nbsp; You pay:</p>
-        <div class="price-old">$47</div>
-        <div class="price-big"><sup>$</sup>17</div>
-        <p style="font-size:13px;color:var(--text-muted);margin-top:10px;">One-time payment · Complete Course (digital) · Delivered through our secure checkout system</p>
-        <ul style="text-align:left;max-width:420px;margin:36px auto;padding:0;list-style:none;">
-          <li style="display:flex;gap:12px;padding:8px 0;font-size:14px;color:#7ee89a;align-items:center;flex-wrap:wrap;"><span>🎁</span> Essential Tools for Gem Seekers — FREE BONUS (value: $27)<span style="background:rgba(50,180,80,0.2);border:1px solid rgba(50,180,80,0.4);padding:2px 8px;font-size:10px;color:#7ee89a;margin-left:8px;letter-spacing:0.1em;">FREE</span></li>
-          <li style="display:flex;gap:12px;padding:8px 0;font-size:14px;color:var(--text-muted);"><span>💎</span> Gemology Journey — identification ebook (Complete Course)</li>
-          <li style="display:flex;gap:12px;padding:8px 0;font-size:14px;color:var(--text-muted);"><span>📸</span> REPLACE: note if your Complete Course includes photo plates / diagrams</li>
-          <li style="display:flex;gap:12px;padding:8px 0;font-size:14px;color:var(--text-muted);"><span>📋</span> Structured criteria for field triage</li>
-          <li style="display:flex;gap:12px;padding:8px 0;font-size:14px;color:var(--text-muted);"><span>📖</span> Glossary-oriented support (as included in your file)</li>
-          <li style="display:flex;gap:12px;padding:8px 0;font-size:14px;color:var(--text-muted);"><span>🔒</span> Secure checkout via our secure payment platform</li>
-        </ul>
-        <a href="#" class="btn-main" style="max-width:100%;min-height:72px;font-size:19px;" data-cta="offer" onclick="openHotmart(); return false;">▶ GET BOTH GUIDES INSTANTLY — $17</a>
-        <p style="font-size:12px;color:var(--text-muted);margin-top:14px;">🔒 Encrypted secure checkout · Credit card · PayPal · Local payment options</p>
-        <div style="margin-top:40px;border-top:1px solid var(--border-dim);padding-top:32px;text-align:left;max-width:480px;margin-left:auto;margin-right:auto;">
-          <p style="font-size:14px;font-weight:500;color:var(--text-primary);margin:0 0 8px;">🛡️ 7-Day Money-Back Guarantee</p>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.8;margin:0;">Refund eligibility and timing follow the policy shown for this product at purchase time. Request a refund through the purchase confirmation email. Use the support link in your purchase confirmation email if you need help.</p>
-        </div>
       </div>
     </section>
 
